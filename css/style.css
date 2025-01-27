@@ -1,0 +1,261 @@
+:root {
+	--gold-clr-300: rgb(154, 113, 9);
+	--white-opacity-30: rgba(255, 255, 255, 0.3);
+	--red-opacity-30: hsla(0, 94%, 40%, 0.5);
+	--red-clr-300: rgb(199, 6, 6);
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	/* - */
+	font-size: 16px;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+*::selection {
+	color: rgb(255, 255, 255);
+	background-color: var(--gold-clr-300);
+}
+
+html,
+body {
+	height: 100vh;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	background-image: url("../assets/Cole_Thomas_The_Course_of_Empire_Destruction_1836.jpg");
+	background-size: cover;
+}
+
+body::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: inherit;
+	background-size: cover;
+	filter: brightness(0.6);
+	z-index: -1;
+}
+
+h1,
+h2 {
+	font-family: "Italiana", serif;
+	font-size: 3.5rem;
+	font-weight: 400;
+	color: white;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	z-index: 100;
+}
+
+h2 {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 2.5rem;
+}
+
+label {
+	font-size: 1.25rem;
+	letter-spacing: 1.5px;
+	color: white;
+	margin-top: 10px;
+}
+
+main {
+	position: relative;
+	display: flex;
+	align-items: center;
+	flex: 1;
+}
+
+/*
+
+Modal de Erro
+
+*/
+
+dialog {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 70px 100px;
+	border: 1px solid var(--red-opacity-30);
+	border-radius: 20px;
+	background-color: black;
+	z-index: 100;
+}
+
+dialog > p {
+	color: white;
+	font-size: 1.3rem;
+	margin-top: 15px;
+}
+
+dialog::backdrop {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+#modal__error--phrase {
+	color: silver;
+}
+
+#button__modal--close {
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	width: 45px;
+	height: 45px;
+	/*- */
+	font-size: 0.9rem;
+	font-weight: bold;
+	color: white;
+	/*- */
+	margin-right: auto;
+	margin-top: 10px;
+	/*- */
+	outline: none;
+	border: 1px solid var(--white-opacity-30);
+	border-radius: 50%;
+	/*- */
+	cursor: pointer;
+	background-color: transparent;
+	transition: background-color 700ms;
+}
+
+#button__modal--close:hover {
+	color: black;
+	border: 1px solid var(--white-opacity-30);
+	background-color: white;
+}
+
+/* -- -- */
+
+/*
+
+Input
+
+*/
+input {
+	font-family: "Marcellus", "serif";
+	font-size: 1.05rem;
+	text-transform: uppercase;
+	letter-spacing: 1.12px;
+	color: white;
+	/* - */
+	padding: 15px 10px;
+	outline: none;
+	border: 1px solid var(--white-opacity-30);
+	border-radius: 3px;
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+input:focus {
+	border-color: white;
+}
+
+.input__error {
+	border: 1px solid;
+	border-color: var(--red-clr-300);
+}
+
+#button__input {
+	font-family: "Marcellus", "serif";
+	font-size: 1rem;
+	letter-spacing: 2px;
+	color: white;
+	width: 100%;
+	margin-top: 20px;
+	padding: 15px;
+	outline: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	background-color: black;
+	cursor: pointer;
+	transition: border-color 700ms;
+}
+
+#button__input:hover {
+	border-color: rgba(255, 255, 255, 0.51);
+}
+
+/* -- -- */
+
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 0;
+	margin-top: auto;
+	font-family: "Marcellus", "serif";
+	font-size: 1.05rem;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	max-width: 850px;
+	margin-left: 200px;
+}
+
+.container__input {
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
+	margin-top: 10px;
+}
+
+.wrapper {
+	z-index: 10;
+}
+
+.border {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 95%;
+	height: 90%;
+	transform: translate(-50%, -50%);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	z-index: 3;
+}
+
+.icon-tabler-arrows-horizontal {
+	width: 40px;
+	height: 40px;
+	stroke-width: 1px;
+}
+
+/*
+
+Media querie
+
+*/
+@media (max-width: 1250px) {
+	main {
+		justify-content: center;
+	}
+
+	h1 {
+		font-size: 2rem;
+		margin-left: 30px;
+	}
+
+	.wrapper {
+		margin: 0 30px;
+	}
+
+	.container {
+		margin: 0px 20px;
+	}
+}

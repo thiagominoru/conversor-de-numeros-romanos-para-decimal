@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Italiana&family=Luxurious+Roman&family=Marcellus&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+		<title>Conversor de números romanos para decimal</title>
+	</head>
+	<body>
+		<main>
+			<div class="container">
+				<div class="border"></div>
+				<h1>
+					Conversor de Número Romano
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						class="icon icon-tabler icons-tabler-outline icon-tabler-arrows-horizontal"
+					>
+						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+						<path d="M7 8l-4 4l4 4" />
+						<path d="M17 8l4 4l-4 4" />
+						<path d="M3 12l18 0" />
+					</svg>
+					Decimal
+				</h1>
+				<div class="wrapper">
+					<div class="container__input">
+						<label for="input__romano">Romano</label>
+						<input id="input__romano" type="text" />
+					</div>
+					<div class="container__input">
+						<label for="input__decimal">Decimal</label>
+						<input id="input__decimal" type="text" />
+					</div>
+					<button id="button__input" type="button">Converter</button>
+				</div>
+			</div>
+			<dialog id="modal__error">
+				<h2>Oh não</h2>
+				<p id="modal__error--phrase">
+					Valor ou ordem invalida inserida
+				</p>
+				<button id="button__modal--close">X</button>
+			</dialog>
+		</main>
+		<footer>by @thiagomatsuzaki ✌</footer>
+	</body>
+	<script defer src="js/script.js"></script>
+</html>
