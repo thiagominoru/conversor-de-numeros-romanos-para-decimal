@@ -62,3 +62,4 @@ const maxNumber = valor de preferência
 ```
 
 ## 👀 _Preview_
+![image alt](https://github.com/thiagominoru/conversor-de-numeros-romanos-para-decimal/blob/main/Preview.png?raw=true)
